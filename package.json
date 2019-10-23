@@ -1,0 +1,20 @@
+{
+  "name": "projectschema",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "forever-monitor": "^1.7.1",
+    "moment": "^2.24.0",
+    "sqlite": "^3.0.2",
+    "uuidv4": "^3.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
