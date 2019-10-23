@@ -14,7 +14,7 @@ app.use(function (request, result, next) {
 //skapa databas
 let database
 //assign databas
-sqlite.open('database/schema.sqlite').then(database_ => {
+sqlite.open('database/osbackend.sqlite').then(database_ => {
     database = database_
 }) // Open DB end 
 
