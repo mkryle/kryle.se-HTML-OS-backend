@@ -18,7 +18,7 @@ sqlite.open('database/osbackend.sqlite').then(database_ => {
     database = database_
 }) // Open DB end 
 
-// load the day
+// load
 app.get('/', (request, response) => {
     database.all('SELECT * FROM osx;', ).then(texten => {
         response.send(texten)
@@ -26,7 +26,7 @@ app.get('/', (request, response) => {
     response.status(201)
 }) //db run close
 
-// load the day
+// load 
 app.get('/createdBy/:namn', (request, response) => {
     database.all('SELECT * FROM osx WHERE createdBy=?;',
         [request.params.namn]
@@ -36,7 +36,7 @@ app.get('/createdBy/:namn', (request, response) => {
     response.status(201)
 }) //db run close
 
-//post för att lägga till
+//post
 app.post('/', (request, response) => {
     database.run('INSERT INTO osx VALUES (?,?)',
         [request.body.textSave, request.body.createdBy]
@@ -49,7 +49,7 @@ app.post('/', (request, response) => {
 }) // app close
 
 
-// put för att ändra 
+// put 
 app.put('/change/:name', (request, response) => {
     database.run('UPDATE osx SET textSave=? WHERE createdBy=?;',
         [request.body.textSave, request.params.name]
